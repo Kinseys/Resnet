@@ -48,7 +48,7 @@ def conv3x3(in_channels, out_channels, kernel_size = 3,stride=1, padding=1):
                      stride=stride, padding=padding, bias=False)
 
 
-# Resnet_50  中的残差块
+# Resnet_101  中的残差块
 class ResidualBlock(nn.Module):
     def __init__(self, in_channels, out_channels, stride=1, downsample=None):
         super(ResidualBlock, self).__init__()
@@ -122,7 +122,7 @@ class ResNet(nn.Module):
         out = out.view( -1,math.ceil(img_height/32)*math.ceil(img_width/32)*2048)
         return out
 
-#Resnet-50 3-4-23-3 总计(3+4+23+3)*3=99 个conv层 加上开头的2个conv 一共101层
+#Resnet-101 3-4-23-3 总计(3+4+23+3)*3=99 个conv层 加上开头的2个conv 一共101层
 model = ResNet(ResidualBlock, [3, 4, 23, 3]).to(device)
 
 # 损失函数
