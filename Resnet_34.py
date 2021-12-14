@@ -48,7 +48,7 @@ def conv3x3(in_channels, out_channels, kernel_size = 3,stride=1, padding=1):
                      stride=stride, padding=padding, bias=False)
 
 
-# Resnet_50  中的残差块
+# Resnet_34  中的残差块
 class ResidualBlock(nn.Module):
     def __init__(self, in_channels, out_channels, stride=1, downsample=None):
         super(ResidualBlock, self).__init__()
