@@ -114,7 +114,7 @@ class ResNet(nn.Module):
         out = out.view( -1,math.ceil(img_height/32)*math.ceil(img_width/32)*512)
         return out
 
-#Resnet-50 3-4-6-3 总计(3+4+6+3)*3=48 个conv层 加上开头和最后的fc 一共50层
+#Resnet-18 2-2-2-2 总计(2+2+2+2)*2=16 个conv层 加上开头的2个conv 一共18层
 model = ResNet(ResidualBlock, [2, 2, 2, 2]).to(device)
 
 # 损失函数
