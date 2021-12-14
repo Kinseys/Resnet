@@ -10,7 +10,7 @@ pip install torch
 
 python resnet_13.py
 
-由于Cifar-10中数据集图片大小仅有28*28
+由于Cifar-10中数据集图片大小仅有32*32
 
 因此Resnet-34,50,101 都没有仅12个卷积的Resnet-12准确率更高可达到0.88
 
