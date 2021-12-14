@@ -11,9 +11,9 @@ num_epochs = 5  # 50轮
 batch_size = 50  # 50步长
 learning_rate = 0.01  # 学习率0.01
 
-#Cifar 数据集是28*28的图片，如若导入自己数据集记得修改图片宽高数值
-img_height = 28
-img_width = 28
+#Cifar 数据集是32*32的图片，如若导入自己数据集记得修改图片宽高数值
+img_height = 32
+img_width = 32
 
 # 图像预处理
 transform = transforms.Compose([
